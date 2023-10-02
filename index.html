@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-  <header>
+  <header role="banner">
     <a href="#main" class="skip">Skip to main content</a>
     …
     </header>
@@ -21,7 +21,7 @@
 <body>
   <div class="container">
     <div class="site-header">
-      <h1>Jam Box Studios</h1>
+      <h1 role="heading">Jam Box Studios</h1>
       <div class="main-nav">
         <ul>
           <li><a href="#">Home</a></li>
@@ -38,18 +38,19 @@
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <div class="owner">
         <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li itemprop="givenName">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+        <h1 >Address</h1>
+        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">  Jambox Studios
+          123 Guitar Road,</span>
+          <span itemprop="addressLocality">Musicville,</span>
+          <span itemprop="addressCountry"> Danceistan</span>
+          <span itemprop="postalCode">B3T 0L0</span>
         </p>
       </div>
       <div class="contact-section">
@@ -69,7 +70,7 @@
     <div class="scroll-top"> <!--scrollbar at the end of main-->
       <a class="scroll-top__link" href="#">Back to top</a> <!--href="#" navigates to the top of the page-->
     </div>
-    <div class="site-footer">
+    <div role="contentinfo" class="site-footer">
       &copy; 2021 Jam Box Studios
     </div>
   </div>
